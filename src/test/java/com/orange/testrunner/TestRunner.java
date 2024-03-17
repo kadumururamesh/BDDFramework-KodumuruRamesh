@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features="src/test/resources/FeaturesFiles",
 		glue= {"com.orange.stepdefinations"},
-		monochrome=true,
+		//monochrome=true,
 		plugin= {"pretty","junit:Test_Reports/XMLReport.xml"}
 		//dryRun=true
 		
