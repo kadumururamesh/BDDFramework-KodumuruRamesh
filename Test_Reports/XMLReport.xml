@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="8.306" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="To verify the login page functionality" name="Login with Valid username &amp; Password" time="8.18">
+<system-out><![CDATA[
+Given Open the Orange.com page..............................................passed
+When Verify that Orange.com Page is opened..................................passed
+And Enter valid username....................................................passed
+And Enter Valid Password....................................................passed
+And Click on the Login Button...............................................passed
+Then Verify user able to view the Orange.com Home page......................passed
+]]></system-out>
+</testcase>
+</testsuite>
