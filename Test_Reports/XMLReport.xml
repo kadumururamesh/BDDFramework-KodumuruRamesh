@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="10.175" tests="2" skipped="0" failures="0" errors="0">
-<testcase classname="To Verify that Home oage functionality" name="To Chreck Home Page Title" time="0.001">
+<testsuite name="Cucumber" time="12.444" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="To Verify that Home oage functionality" name="To Chreck Home Page Title" time="0.002">
 </testcase>
-<testcase classname="To verify the login page functionality" name="Login with Valid username &amp; Password" time="10.084">
+<testcase classname="To verify the login page functionality" name="Login with Valid username &amp; Password" time="12.348">
 <system-out><![CDATA[
 Given Open the Orange.com page..............................................passed
 When Verify that Orange.com Page is opened..................................passed
