@@ -1,4 +1,4 @@
-package com.orange.tests;
+package com.orange.pages;
 
 public class HomePage {
 

@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.orange.Utils.UserActions">
+      <class name="working.pack.Sample">
         <methods>
-          <include name="openURL"/>
+          <include name="launchChrome"/>
+          <include name="test1"/>
         </methods>
-      </class> <!-- com.orange.Utils.UserActions -->
+      </class> <!-- working.pack.Sample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

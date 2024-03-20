@@ -1,19 +1,22 @@
-package com.orange.tests;
+package com.orange.pages;
 
 import com.orange.Utils.UserActions;
 import java.net.URL;
 
 import org.testng.Assert;
+import org.apache.log4j.Logger;
 
 public class LoginPage {
 	
 	UserActions Action=new UserActions();
 	String title;
 	
+	
 	public String url="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
 	
 	public void Open_Orange_Website() {
 		Action.openURL(url);
+		
 		
 	}
 	

@@ -1,9 +1,12 @@
 package com.orange.stepdefinations;
 
-import org.junit.Assert;
+
+
+
+import org.apache.log4j.Logger;
 
 import com.orange.Utils.UserActions;
-import com.orange.tests.LoginPage;
+import com.orange.pages.LoginPage;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -17,12 +20,30 @@ public class LoginSteps {
 	LoginPage loginpage=new LoginPage();
 	UserActions Action=new UserActions();
 	
+	
+	static final Logger log = Logger.getLogger(LoginSteps.class);
 	String title;
+	
+	
+
+	@Given("Load Object Repo for Web Application")
+	public void load_object_repo_for_web_application() {
+		try {
+			
+		}catch(Exception e) {
+			e.getMessage();
+		}
+	}
+
+
+
 	
 	@Given("Open the Orange.com page")
 	public void open_the_orange_com_page() {
 		try {
 			loginpage.Open_Orange_Website();
+			log.debug("ramesh..............");
+			
 			
 		}catch(Exception e) {
 			

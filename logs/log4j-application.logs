@@ -1,0 +1,4 @@
+2024-03-21 01:18:14,362  INFO [main] LoadObjectRepoWeb:76 - LoginPage Username_EditBox-By.xpath: //input[@placeholder='Username']
+ 2024-03-21 01:18:14,365  INFO [main] LoadObjectRepoWeb:76 - LoginPage Password_EditBox-By.xpath: //input[@placeholder='Password']
+ 2024-03-21 01:18:14,366  INFO [main] LoadObjectRepoWeb:76 - LoginPage Login_Button-By.xpath: //button[@type='submit']
+ 
