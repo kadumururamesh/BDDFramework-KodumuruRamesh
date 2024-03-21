@@ -1,4 +1,4 @@
-package com.orange.Utils;
+package com.web.orange.Utils;
 
 import java.net.URL;
 
@@ -6,12 +6,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import com.orange.Utils.BaseClass;
+import com.web.orange.Utils.WebDriverFactory;
 
 
 
 
-public class UserActions extends BaseClass{
+public class UserActions extends WebDriverFactory{
 	
 	public WebDriver driver;
 	

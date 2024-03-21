@@ -11,7 +11,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.orange.Utils.LoadObjectRepoWeb;
+import com.web.orange.Utils.LoadObjectRepoWeb;
 
 public class Sample {
 	

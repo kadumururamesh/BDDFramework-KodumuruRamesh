@@ -1,5 +1,0 @@
-2024-03-20 20:12:11,240  INFO [main] test1:22 - Able to lanch the broswer
- 2024-03-20 20:12:43,084  INFO [main] test1:57 - before Quitclass org.openqa.selenium.chrome.ChromeDriver
- 2024-03-20 20:12:43,319  INFO [main] test1:59 - After Quitclass org.openqa.selenium.chrome.ChromeDriver
- 2024-03-20 20:12:43,335  INFO [main] test1:63 - Yes null
- 

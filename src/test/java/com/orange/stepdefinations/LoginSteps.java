@@ -5,8 +5,8 @@ package com.orange.stepdefinations;
 
 import org.apache.log4j.Logger;
 
-import com.orange.Utils.UserActions;
-import com.orange.pages.LoginPage;
+import com.web.orange.Utils.UserActions;
+import com.web.orange.pages.LoginPage;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;

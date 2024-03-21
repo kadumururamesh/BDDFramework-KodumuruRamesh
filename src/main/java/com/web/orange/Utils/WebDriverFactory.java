@@ -1,4 +1,4 @@
-package com.orange.Utils;
+package com.web.orange.Utils;
 
 import java.util.concurrent.TimeUnit;
 
@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class BaseClass {
+public class WebDriverFactory {
 	
 	private WebDriver driver=null;
 	private String path=System.getProperty("user.dir");

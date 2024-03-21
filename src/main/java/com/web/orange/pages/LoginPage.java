@@ -1,9 +1,11 @@
-package com.orange.pages;
+package com.web.orange.pages;
 
-import com.orange.Utils.UserActions;
 import java.net.URL;
 
 import org.testng.Assert;
+
+import com.web.orange.Utils.UserActions;
+
 import org.apache.log4j.Logger;
 
 public class LoginPage {
