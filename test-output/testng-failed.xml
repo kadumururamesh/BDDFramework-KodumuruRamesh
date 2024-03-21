@@ -5,7 +5,6 @@
     <classes>
       <class name="com.mobile.orange.pages.Sample1">
         <methods>
-          <include name="AppiumSetup"/>
           <include name="test"/>
         </methods>
       </class> <!-- com.mobile.orange.pages.Sample1 -->
