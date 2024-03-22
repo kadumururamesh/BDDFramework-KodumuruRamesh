@@ -9,8 +9,10 @@ import io.cucumber.junit.CucumberOptions;
 		features="src/test/resources/FeaturesFiles",
 		glue= {"com.orange.stepdefinations"},
 		//monochrome=true,
-		plugin= {"pretty","json:target/report.json"},
-		dryRun=true
+		//plugin= {"pretty","json:target/report.json"},
+		//dryRun=true
+		plugin ={"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+		//dryRun=true
 		
 		)
 

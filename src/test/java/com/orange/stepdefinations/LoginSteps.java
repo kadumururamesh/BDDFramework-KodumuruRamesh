@@ -3,7 +3,9 @@ package com.orange.stepdefinations;
 
 
 
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 import com.web.orange.Utils.UserActions;
 import com.web.orange.pages.LoginPage;
@@ -21,7 +23,7 @@ public class LoginSteps {
 	UserActions Action=new UserActions();
 	
 	
-	static final Logger log = Logger.getLogger(LoginSteps.class);
+	Logger log = LogManager.getLogger("LoginSteps");
 	String title;
 	
 	
