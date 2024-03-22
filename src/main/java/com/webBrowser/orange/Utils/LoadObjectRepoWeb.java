@@ -1,25 +1,15 @@
-package com.web.orange.Utils;
+package com.webBrowser.orange.Utils;
 
-import java.io.File;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Iterator;
-import java.util.concurrent.TimeUnit;
-import java.util.prefs.Preferences;
-
-import org.apache.log4j.Logger;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
+
 
 public class LoadObjectRepoWeb {
 	
@@ -45,7 +35,7 @@ public class LoadObjectRepoWeb {
 	public static HashMap<String,By> references=null;
 	
 	
-	static Logger log =Logger.getLogger(LoadObjectRepoWeb.class);
+	
 	
 	  
 	 // @Test
@@ -73,7 +63,7 @@ public class LoadObjectRepoWeb {
 				String value=sheet.getRow(j).getCell(2).getStringCellValue();
 				By val=getBy(type,value);
 				references.put(alias, val);
-				log.info((alias +"-"+val));
+				System.out.println((alias +"-"+val));
 				//log.info(references.get(alias));
 				
 				

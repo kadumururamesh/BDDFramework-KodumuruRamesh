@@ -2,18 +2,21 @@ package working.pack;
 
 import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.Logger;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.AfterTest;
+
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import com.web.orange.Utils.LoadObjectRepoWeb;
+import com.webBrowser.orange.Utils.LoadObjectRepoWeb;
 
-public class Sample {
+
+
+
+public class Sample extends LoadObjectRepoWeb{
 	
 	
 	

@@ -1,10 +1,10 @@
-package com.web.orange.pages;
+package com.webBrowser.orange.pages;
 
 import java.net.URL;
 
 import org.testng.Assert;
 
-import com.web.orange.Utils.UserActions;
+import com.webBrowser.orange.Utils.UserActions;
 
 import org.apache.log4j.Logger;
 

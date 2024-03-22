@@ -1,4 +1,4 @@
-package com.web.orange.Utils;
+package com.webBrowser.orange.Utils;
 
 import java.util.concurrent.TimeUnit;
 
