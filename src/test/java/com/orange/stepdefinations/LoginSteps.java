@@ -5,13 +5,14 @@ package com.orange.stepdefinations;
 
 
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+import org.testng.Reporter;
 
 import com.webBrowser.orange.Utils.UserActions;
 import com.webBrowser.orange.pages.LoginPage;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.BeforeAll;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -20,11 +21,22 @@ import io.cucumber.java.en.When;
 public class LoginSteps {
 	
 	LoginPage loginpage=new LoginPage();
-	UserActions Action=new UserActions();
+	
+	UserActions action=new UserActions();
 	
 	
-	Logger log = LogManager.getLogger("LoginSteps");
-	String title;
+	@BeforeAll
+	
+	public static void beforeall()
+	{
+		System.out.println("Trying intialize deriver");
+		
+		UserActions.IntializeDriver();
+		Reporter.log("Driver intialized successfully");
+		
+	}
+	
+	
 	
 	
 
@@ -40,11 +52,12 @@ public class LoginSteps {
 
 
 	
-	@Given("Open the Orange.com page")
-	public void open_the_orange_com_page() {
+	@Given("Navigate to Orange website")
+	public void Navigate_to_Orange_website() {
 		try {
+			//UserActions.IntializeDriver();
 			loginpage.Open_Orange_Website();
-			log.debug("ramesh..............");
+			//log.debug("ramesh..............");
 			
 			
 		}catch(Exception e) {
@@ -71,8 +84,19 @@ public class LoginSteps {
 			
 		}
 	}
+	
+		
+	@And("Enter Invalid username")
+	public void enter_Invalid_username() {
+		try {
+			loginpage.enter_Invalid_useranme();
+		}catch(Exception e) {
+			
+		}
+	}
 
-	@And("Enter Valid Password")
+
+	@And("Enter valid Password")
 	public void enter_valid_password() {
 		try {
 			loginpage.enter_valid_password();
@@ -81,6 +105,17 @@ public class LoginSteps {
 		}
 		
 	}
+	
+	@And("Enter Invalid Password")
+	public void enter_invalid_password() {
+		try {
+			loginpage.enter_Invalid_password();
+		}catch(Exception e) {
+			
+		}
+	}
+	
+	
 
 	@And("Click on the Login Button")
 	public void click_on_the_login_button() {
@@ -95,7 +130,10 @@ public class LoginSteps {
 	@Then("Verify user able to view the Orange.com Home page")
 	public void verify_user_able_to_view_the_orange_com_home_page() {
 		try {
-			loginpage.Verify_page_title();
+			String title=loginpage.Verify_page_title();
+			
+			System.out.println("title Ramesh1- " +title);
+			//action.close_browser();
 			
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -103,14 +141,18 @@ public class LoginSteps {
 		
 	}
 	
-	@Before
-	public void before_step() {
-		System.out.println("This before one");
+	@Then("Verify user not able to view the Orange.com Home page")
+	public void verify_user_not_able_to_view_the_orange_com_home_page() {
+		try {
+			String title=loginpage.Verify_page_title();
+			System.out.println("title Ramesh2- " +title);
+			//action.close_browser();
+						
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 	
-	@After
-	public void after_step() {
-		System.out.println("This After one");
-	}
-
+	
 }

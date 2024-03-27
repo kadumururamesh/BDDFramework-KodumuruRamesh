@@ -9,11 +9,11 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WebDriverFactory {
 	
-	private WebDriver driver=null;
-	private String path=System.getProperty("user.dir");
-	private String s="chrome";
+	private static WebDriver driver=null;
+	private static String path=System.getProperty("user.dir");
+	private static String s="chrome";
 	
-	public WebDriver getDriver() {
+	public static WebDriver getDriver() {
 		try {
 			driver=setDriver();
 		} catch (Exception e) {
@@ -25,7 +25,7 @@ public class WebDriverFactory {
 	}
 	
 	
-	private WebDriver setDriver() {
+	private static WebDriver setDriver() {
 		
 		if(s.equalsIgnoreCase("Chrome")) {
 			
@@ -66,7 +66,7 @@ public class WebDriverFactory {
 			
 		}
 		
-		return this.driver;
+		return driver;
 	}
 
 }

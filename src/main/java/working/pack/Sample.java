@@ -2,7 +2,7 @@ package working.pack;
 
 import java.util.concurrent.TimeUnit;
 
-
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,7 +25,7 @@ public class Sample extends LoadObjectRepoWeb{
 
 		static WebDriver driver=null;
 		
-		//final static Logger log=Logger.getLogger(Sample.class);
+		static Logger log=Logger.getLogger("devpinoyLogger");
 		
 		@BeforeTest 
 		  static void launchChrome() { 
@@ -34,6 +34,7 @@ public class Sample extends LoadObjectRepoWeb{
 		System.getProperty("weddriver.chrome.driver",System.getProperty("user.dir")+"chromedriver.exe");
 		  driver=new ChromeDriver(); 
 		 System.out.println("Able to lanch the broswer"); //this.driver=driver;
+		 log.debug("System.out.println(\"Able to lanch the broswer\");");
 		  }
 		  
 		 
@@ -54,6 +55,7 @@ public class Sample extends LoadObjectRepoWeb{
 		  driver.findElement(username).sendKeys("Admin");
 		  driver.findElement(password).sendKeys("admin123"); 
 		  driver.findElement(login).click();
+		  log.debug("System.out.println(\"Able to lanch the broswer\");");
 		  //log.info(driver.getClass()); 
 		  if (driver.findElement(By.xpath("//h6[@class='oxd-text oxd-text--h6 oxd-topbar-header-breadcrumb-module']")).isDisplayed())
 		  driver.findElement(By.xpath("//p[@class='oxd-userdropdown-name']")).click();
@@ -62,6 +64,7 @@ public class Sample extends LoadObjectRepoWeb{
 		  act.clickAndHold(driver.findElement(By.xpath( "//p[@class='oxd-userdropdown-name']"))).moveToElement(driver.findElement(By.
 		  xpath("//a[@href='/web/index.php/help/support']"))).click().build().perform()
 		  ;
+		  log.debug("System.out.println(\"Able to lanch the broswer\");");
 		  
 		  //driver.findElement(By.xpath("//input[@class='oxd-input oxd-input--active']")).sendKeys("Admin"); //------------------------------------
 		  

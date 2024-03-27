@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mobile.orange.pages.Sample1">
+      <class name="working.pack.AppiumZoomout">
         <methods>
-          <include name="test"/>
+          <include name="appiumZoomout"/>
         </methods>
-      </class> <!-- com.mobile.orange.pages.Sample1 -->
+      </class> <!-- working.pack.AppiumZoomout -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
