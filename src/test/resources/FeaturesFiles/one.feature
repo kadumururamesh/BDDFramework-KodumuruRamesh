@@ -1,3 +1,4 @@
+@login @ramesh
 Feature: To verify the login page functionality
 
 Scenario: login scene-1
@@ -10,12 +11,13 @@ Scenario: login scene-2
 Given login Scene two
 Then login Message Scene two
 
-@three
+@three @smoke @reg @int
 Scenario: login scene-3
 
 Given login Scene three
 Then login Message Scene three
 
+@smoke
 Scenario: login scene-4
 
 Given login Scene four

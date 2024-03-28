@@ -11,8 +11,10 @@ import com.webBrowser.orange.Utils.UserActions;
 import com.webBrowser.orange.pages.LoginPage;
 
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
+import io.cucumber.java.BeforeStep;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -29,11 +31,16 @@ public class LoginSteps {
 	
 	public static void beforeall()
 	{
-		System.out.println("Trying intialize deriver");
+		System.out.println("BeforeAll step");
 		
-		UserActions.IntializeDriver();
+		//UserActions.IntializeDriver();
 		Reporter.log("Driver intialized successfully");
 		
+	}
+	
+	@BeforeStep
+	public void beforestep() {
+		System.out.println("------------------------------- Before step annonations--------------------");
 	}
 	
 	
@@ -55,13 +62,13 @@ public class LoginSteps {
 	@Given("Navigate to Orange website")
 	public void Navigate_to_Orange_website() {
 		try {
-			//UserActions.IntializeDriver();
+			UserActions.IntializeDriver();
 			loginpage.Open_Orange_Website();
 			//log.debug("ramesh..............");
 			
 			
 		}catch(Exception e) {
-			
+			e.printStackTrace();
 		}
 	}
 
@@ -81,7 +88,7 @@ public class LoginSteps {
 			loginpage.enter_valid_useranme();
 			
 		}catch(Exception e) {
-			
+			e.printStackTrace();
 		}
 	}
 	
@@ -91,7 +98,7 @@ public class LoginSteps {
 		try {
 			loginpage.enter_Invalid_useranme();
 		}catch(Exception e) {
-			
+			e.printStackTrace();
 		}
 	}
 
@@ -101,7 +108,7 @@ public class LoginSteps {
 		try {
 			loginpage.enter_valid_password();
 		}catch(Exception e) {
-			
+			e.printStackTrace();
 		}
 		
 	}
@@ -111,7 +118,7 @@ public class LoginSteps {
 		try {
 			loginpage.enter_Invalid_password();
 		}catch(Exception e) {
-			
+			e.printStackTrace();
 		}
 	}
 	
@@ -122,7 +129,7 @@ public class LoginSteps {
 		try {
 			loginpage.Click_on_Login_Button();
 		}catch(Exception e) {
-			
+			e.printStackTrace();
 		}
 		
 	}
@@ -133,7 +140,7 @@ public class LoginSteps {
 			String title=loginpage.Verify_page_title();
 			
 			System.out.println("title Ramesh1- " +title);
-			//action.close_browser();
+			action.close_browser();
 			
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -146,7 +153,7 @@ public class LoginSteps {
 		try {
 			String title=loginpage.Verify_page_title();
 			System.out.println("title Ramesh2- " +title);
-			//action.close_browser();
+			action.close_browser();
 						
 		}catch(Exception e) {
 			e.printStackTrace();

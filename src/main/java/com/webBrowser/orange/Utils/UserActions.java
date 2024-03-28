@@ -14,7 +14,7 @@ import com.webBrowser.orange.Utils.WebDriverFactory;
 
 public class UserActions extends WebDriverFactory{
 	
-	public static WebDriver driver;
+	public static WebDriver driver=null;
 	
 	public static void IntializeDriver() {
 		try {
@@ -72,6 +72,7 @@ public class UserActions extends WebDriverFactory{
 	
 	public void close_browser() {
 		driver.close();
+		
 		
 	}
 	

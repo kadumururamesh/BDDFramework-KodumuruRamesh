@@ -1,5 +1,7 @@
 package com.orange.stepdefinations;
 
+import io.cucumber.java.AfterAll;
+import io.cucumber.java.BeforeAll;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
@@ -64,6 +66,17 @@ public class Onestep {
 	     System.out.println("Then Step-5");
 	    
 	}
+	
+	@AfterAll
+	public static void afterall()
+	{
+		System.out.println("AfterAll step");
+		
+		//UserActions.IntializeDriver();
+		//Reporter.log("Driver intialized successfully");
+		
+	}	
+	
 
 
 }
