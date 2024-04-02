@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="working.pack.AppiumZoomout">
+      <class name="seleniumexamples.AutoCompleteExample">
         <methods>
-          <include name="appiumZoomout"/>
+          <include name="example3"/>
         </methods>
-      </class> <!-- working.pack.AppiumZoomout -->
+      </class> <!-- seleniumexamples.AutoCompleteExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

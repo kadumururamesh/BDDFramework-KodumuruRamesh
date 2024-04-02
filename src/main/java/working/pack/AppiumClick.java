@@ -71,6 +71,7 @@ public class AppiumClick {
 	
 	anddriver.perform(Collections.singleton(seq));
 	
+	
 	/*
 	
 	((JavascriptExecutor) anddriver).executeScript("mobile: clickGesture", ImmutableMap.of(
