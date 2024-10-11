@@ -27,13 +27,15 @@ public class BrookenLinks {
 		int i=0;
 		for(WebElement links:a) {
 			String url=links.getAttribute("href");
-			//System.out.println(url);
 			System.out.println("---------------------------------------------");
 			if(url==null || url.isBlank()) {
-				//System.out.println(url +" - is Null");
+				System.out.println(url +" - is Null");
 				
 				continue;
 				
+			}
+			if(url.contains("mailto")) {
+				continue;
 			}
 			
 			try {
@@ -41,14 +43,28 @@ public class BrookenLinks {
 				huc.connect();
 				huc.setConnectTimeout(5000);
 				if(huc.getResponseCode()>=400) {
-					System.out.println(url +"-is broken");
+				
+					System.out.println("Below link is broken link");
+					System.out.println(huc.getURL()+"-is broken link");
+					System.out.println("Request Method used-"+huc.getRequestMethod());
+					System.out.println("ResponseCode"+huc.getResponseCode());
+					System.out.println("Message-"+huc.getResponseMessage());
+					
+					
+					
+					
 					i++;
 				}else {
-					System.out.println(url +"-is not broken");
+					System.out.println("Below link is not a broken link");
+					System.out.println(huc.getURL()+"-is not a broken link");
+					System.out.println("Request Method used-"+huc.getRequestMethod());
+					System.out.println("ResponseCode"+huc.getResponseCode());
+					System.out.println("Message-"+huc.getResponseMessage());
+					
+					
 				}
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				//e.printStackTrace();
+				e.getMessage();
 			}
 			
 			

@@ -21,17 +21,19 @@ import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.ios.IOSDriver;
 
 
-public class AppiumClick {
+public class Zoomwith2fingers {
 	
 	PointerInput finger1=null;
 	Sequence seq=null;
 	
 	@Test
-	void setupCap() throws MalformedURLException {
+	void setupCap() throws MalformedURLException, InterruptedException {
 	
 	
 	
@@ -40,32 +42,26 @@ public class AppiumClick {
 	options.setCapability("device", "device12");
 	options.setCapability("platformVersion","12.0");
 	options.setCapability("automationName","uiautomator2");
-	options.setCapability("appPackage","io.appium.android.apis");
-	options.setCapability("appActivity", "io.appium.android.apis.ApiDemos");
+	//options.setCapability("appPackage","io.appium.android.apis");
+	//options.setCapability("appActivity", "io.appium.android.apis.ApiDemos");
 	
 	
 	AndroidDriver anddriver=new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
 	
 	//anddriver.findElement(AppiumBy.accessibilityId("Views")).click();
 	
-	WebElement ele=anddriver.findElement(AppiumBy.accessibilityId("Views"));
+	anddriver.findElement(AppiumBy.accessibilityId("Chrome")).click();
 	
-	int x=ele.getRect().getX();
-	int y=ele.getRect().getY();
-	int width=ele.getRect().getWidth();
-	int height=ele.getRect().getHeight();
-	System.out.println(x +"-"+y+"-"+width+"-"+height);
+
+	//Point centerOfElement=new Point(111,786);
 	
-	
-	//Point centerOfElement=new Point((int)(x+width/2),(int)(y+height/2));
-	Point centerOfElement=new Point(111,786);
-	
-	System.out.println(centerOfElement);
+	//System.out.println(centerOfElement);
+	Thread.sleep(10000);
 	
 	finger1=new PointerInput(Kind.TOUCH, "finger1");
 	
 	seq=new Sequence(finger1, 1);
-	seq.addAction(finger1.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), centerOfElement));
+	seq.addAction(finger1.createPointerMove(Duration.ZERO, PointerInput.Origin.viewport(), 111,786));
 	seq.addAction(finger1.createPointerDown(PointerInput.MouseButton.LEFT.asArg()));
 	seq.addAction(new Pause(finger1, Duration.ofMillis(200)));
 	seq.addAction(finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
@@ -88,15 +84,10 @@ public class AppiumClick {
 		));
 		
 		*/
+	anddriver.pressKey(new KeyEvent(AndroidKey.HOME));
 	
-	
-
-
-
-	
-	
-	
-	
+		
 	}
 
 }
+

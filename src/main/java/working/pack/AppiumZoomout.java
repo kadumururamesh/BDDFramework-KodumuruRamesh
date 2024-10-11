@@ -29,11 +29,11 @@ public class AppiumZoomout {
 		 options.setCapability("device", "device12");
 		 options.setCapability("platformVersion", "12.0");
 		 options.setCapability("automationname", "uiautomator2");
-		// options.setCapability("browserName", "Chrome");
+		//options.setCapability("browserName", "Chrome");
 		 //options.setCapability("fullReset", true);
 		//options.setAppActivity("com.orangehrm.opensource.MainActivity");
-		options.setCapability("appPackage","io.appium.android.apis");
-		options.setCapability("appActivity", "io.appium.android.apis.ApiDemos");
+		//options.setCapability("appPackage","io.appium.android.apis");
+		//options.setCapability("appActivity", "io.appium.android.apis.ApiDemos");
 		
 		URL url=new URL("http://127.0.0.1:4723");
 		
@@ -42,24 +42,25 @@ public class AppiumZoomout {
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		//driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 		
-		//driver.findElement(AppiumBy.accessibilityId("Chrome")).click();
+		driver.findElement(AppiumBy.accessibilityId("Chrome")).click();
 		
 		PointerInput finger1=new PointerInput(Kind.TOUCH, "finger1");
 		Sequence seq=new Sequence(finger1, 1);
 		
 		Thread.sleep(30000);
 		
-		/*
+		
 		((JavascriptExecutor) driver).executeScript("mobile: pinchOpenGesture", ImmutableMap.of(
-					"left", 200,
-				    "top", 800,
+					"left", 50,
+				    "top", 50,
 				    "width", 1000,
 				    "height", 1000,
 				    "percent", 0.5
 				
 				));
 				
-				*/
+				
+		/*
 		driver.findElement(By.xpath("//android.widget.TextView[@content-desc=\"Views\"]")).click();
 		WebElement element=driver.findElement(AppiumBy.accessibilityId("WebView"));
 		
@@ -70,6 +71,7 @@ public class AppiumZoomout {
 				"percent","1.0"
 				
 				));
+				*/
 		////
 		
 		

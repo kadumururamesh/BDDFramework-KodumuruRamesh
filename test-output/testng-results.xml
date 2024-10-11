@@ -2,16 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-04-02T22:43:21 IST" name="Default suite" finished-at="2024-04-02T22:44:09 IST" duration-ms="48566">
+  <suite started-at="2024-06-20T21:09:09 IST" name="Default suite" finished-at="2024-06-20T21:10:03 IST" duration-ms="53696">
     <groups>
     </groups>
-    <test started-at="2024-04-02T22:43:21 IST" name="Default test" finished-at="2024-04-02T22:44:09 IST" duration-ms="48566">
-      <class name="seleniumexamples.AutoCompleteExample">
-        <test-method signature="example3()[pri:0, instance:seleniumexamples.AutoCompleteExample@4f80542f]" started-at="2024-04-02T22:43:21 IST" name="example3" finished-at="2024-04-02T22:44:09 IST" duration-ms="48536" status="PASS">
+    <test started-at="2024-06-20T21:09:09 IST" name="Default test" finished-at="2024-06-20T21:10:03 IST" duration-ms="53696">
+      <class name="working.pack.Edition067_Zoom_Touch_Gestures">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:working.pack.Edition067_Zoom_Touch_Gestures@793f29ff]" started-at="2024-06-20T21:09:09 IST" name="setUp" finished-at="2024-06-20T21:09:21 IST" duration-ms="11461" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- example3 -->
-      </class> <!-- seleniumexamples.AutoCompleteExample -->
+        </test-method> <!-- setUp -->
+        <test-method signature="ZoomInAndOut()[pri:0, instance:working.pack.Edition067_Zoom_Touch_Gestures@793f29ff]" started-at="2024-06-20T21:09:21 IST" name="ZoomInAndOut" finished-at="2024-06-20T21:10:02 IST" duration-ms="41337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ZoomInAndOut -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:working.pack.Edition067_Zoom_Touch_Gestures@793f29ff]" started-at="2024-06-20T21:10:02 IST" name="tearDown" finished-at="2024-06-20T21:10:03 IST" duration-ms="855" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- working.pack.Edition067_Zoom_Touch_Gestures -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
